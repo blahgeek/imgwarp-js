@@ -33,13 +33,13 @@
   margin: 20px 0;
 }
 </style>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<script type="text/javascript" src="./js/point.js"></script> 
-<script type="text/javascript" src="./js/matrix22.js"></script>  
-<script type="text/javascript" src="./js/deformation.js"></script>
-<script type="text/javascript" src="./js/interpolation.js"></script>  
-<script type="text/javascript" src="./js/point_definer.js"></script> 
-<script type="text/javascript" src="./js/main.js"></script> 
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js?_=201803291408"></script>
+<script type="text/javascript" src="./js/point.js?_=201803291408"></script> 
+<script type="text/javascript" src="./js/matrix22.js?_=201803291408"></script>  
+<script type="text/javascript" src="./js/deformation.js?_=201803291408"></script>
+<script type="text/javascript" src="./js/interpolation.js?_=201803291408"></script>  
+<script type="text/javascript" src="./js/point_definer.js?_=201803291408"></script> 
+<script type="text/javascript" src="./js/main.js?_=201803291408"></script> 
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
 <!-- Optional theme -->
@@ -50,7 +50,7 @@
 <div class="" style="max-width: 1000px; margin: 0 auto;">
   <h2>Warp Image - JS version</h2>
   <div class="row">
-    <div class="col-md-5">
+    <div class="col-md-3">
       <h4>Step 1: Drag an image (from below or from disk) to the right.</h4>
       <div id="sample-images">
         <img src="images/hair.png" draggable="true" class="allow-drag img-thumbnail"/>
@@ -72,13 +72,18 @@
         </dl>
       </div>
     </div>
-    <div class="col-md-7">
+    <div class="col-md-6">
       <div id="drop-area">
         <canvas id="main-canvas" width="400" height="300">  </canvas>
       </div>
       <label><input type="CHECKBOX" name="show-grid" class="redraw" id="show-grid"/> Show Grid</label>
       <label><input type="CHECKBOX" name="show-control" class="redraw" id="show-control" checked/> Show Control Points</label>
+      <label><input type="RANGE" name="morph-ratio" class="redraw" id="morph-ratio" min="0" max="1" step="0.01" value="1" /> Morph Ratio</label>
       <div id="fps"></div>
+    </div>
+    <div class="col-md-3">
+        <button id="config-apply-btn">Apply</button>
+        <textarea id="config-text" style="height: 100%; width: 100%;" rows="20" ></textarea>
     </div>
     <canvas id="myCanvas" style="display:none;"> </canvas>
   </div>
